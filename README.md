@@ -12,7 +12,7 @@ flowchart TD
 A@{ shape: circle, label: Star }
 B@{ shape: rect, label: "data = [7, 5, 8, 2, 10, 11, 25, 26]" }
 C@{ shape: rect, label: "getMax = 0" }
-D@{ shape: rect, label: "getMin = 0" }
+D@{ shape: rect, label: "getMin = 10" }
 E@{ shape: rect, label: "getAverage = 0" }
 F@{ shape: rect, label: "dataLength = data.length" }
 G@{ shape: rect, label: "i = 0" }
@@ -27,17 +27,30 @@ O@{ shape: rect, label: "totalData += data[y]" }
 P@{ shape: rect, label: y++ }
 Q@{ shape: rect, label: "getAverage = totalData / data.length" }
 R@{ shape: lean-r, label: 'Average = "{getAverage}"' }
+S@{ shape: rect, label: i++ }
+T@{ shape: rect, label: "x = 0" }
+U@{ shape: diamond, label: "x < dataLength" }
+V@{ shape: lean-r, label: 'Min = "{getMin}"' }
+W@{ shape: diamond, label: "data[x] < getMin" }
+X@{ shape: rect, label: "data[x]" }
+Y@{ shape: rect, label: x++ }
+Z@{ shape: dbl-circ, label: Stop }
+
 
 A --> B --> C --> D --> E --> F --> G --> H
 H --false--> K
 H --true--> I
 I --false--> G
-I --true--> J --> K
+I --true--> J --> S --> G
 
 K --> L --> M
 M --> N
-N --false--> Q --> R
-N --true--> O --> P
+N --false--> Q --> R --> T
+N --true--> O --> P --> M
+
+T --> U
+U --false--> V --> Z
+U --true--> W --> X --> Y --> T
 
 
 ```
