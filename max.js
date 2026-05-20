@@ -1,9 +1,12 @@
-console.log(calculate([]))
-
 function calculate (data) {
-  if (typeof data !== "array") {
-    return "Parameter must be array and cannot empty";
+  if (!(Array.isArray(data))) {
+    return "Parameter must be array";
   };
+
+  if (data.length < 1) {
+    return "Array cannot empty";
+  }
+
   for (let i = 0; i < data.length; i++) {
     if (typeof data[i] !== "number") {
       return "Array must be number";
@@ -31,3 +34,8 @@ function calculate (data) {
   results += `Average : ${getAverage}`;
   return results
 }
+
+console.log(calculate([2, 1, 3, 1, 8, 9]))
+console.log(calculate(["r", 1]))
+console.log(calculate([]))
+console.log(calculate("STRING"))
