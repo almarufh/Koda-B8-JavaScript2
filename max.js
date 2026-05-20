@@ -1,8 +1,13 @@
-calculate([1, 7, 5, 8, 2, 10, 11, 25, 26])
+console.log(calculate([]))
 
 function calculate (data) {
   if (typeof data !== "array") {
-    return "Parameter must be  array";
+    return "Parameter must be array and cannot empty";
+  };
+  for (let i = 0; i < data.length; i++) {
+    if (typeof data[i] !== "number") {
+      return "Array must be number";
+    }
   }
   let getMax = data[0];
   let getMin = data[0];
