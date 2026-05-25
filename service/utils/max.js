@@ -1,5 +1,5 @@
 /**
- * @typedef {array} Data
+ * @typedef {number[]} Data
  * @property {number} in array not empty and must number
 */
 
@@ -20,6 +20,7 @@
 /**
  * @param {Data} data must array not empty and must number
  * @returns {Output} an object with code, message and data value object with max, min, average
+ * @throws {Error} Error when params not array or array empty and array but not must be number
  */
 
 function calculate (data) {
