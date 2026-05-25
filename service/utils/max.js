@@ -1,3 +1,27 @@
+/**
+ * @typedef {array} Data
+ * @property {number} in array not empty and must number
+*/
+
+/**
+ * @typedef {object} OutputData
+ * @property {number} max max is results calculate max
+ * @property {number} min min is results calculate min
+ * @property {number} average average is results calculate average
+ */
+
+/** 
+ * @typedef {object} Output
+ * @property {string} code code 00
+ * @property {string} message message success
+ * @property {OutputData} data object with max, min and average
+*/
+
+/**
+ * @param {Data} data must array not empty and must number
+ * @returns {Output} an object with code, message and data value object with max, min, average
+ */
+
 function calculate (data) {
   if (!(Array.isArray(data))) {
     throw new Error ("parameter must be a array");
@@ -51,4 +75,4 @@ function calculate (data) {
 
 module.exports = {
   calculate
-}
+} 
