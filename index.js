@@ -1,4 +1,4 @@
-const {calculate} = require('./max.js');
+const {calculate} = require('./service/utils/max.js');
 
 
 const response = calculate([2,5,10,67,8,10,15,20]);

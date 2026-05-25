@@ -1,6 +1,6 @@
 const {describe: unit, it} = require('node:test');
 const input = require('node:assert/strict');
-const {calculate} = require('./max.js');
+const {calculate} = require('../utils/max.js');
 
 unit('calculating procces', ()=> {
     it('should error when parameter is not a array', () => {
