@@ -1,0 +1,27 @@
+{
+  "name": "unit-testing",
+  "version": "1.0.0",
+  "description": "unit testing function max min and average",
+  "main": "max.js",
+  "scripts": {
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almarufh/Koda-B8-JavaScript2.git"
+  },
+  "keywords": [
+    "unit-testing"
+  ],
+  "author": "almarufh",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/almarufh/Koda-B8-JavaScript2/issues"
+  },
+  "homepage": "https://github.com/almarufh/Koda-B8-JavaScript2#readme",
+  "dependencies": {
+    "@types/node": "^25.9.1"
+  }
+}
