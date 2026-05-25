@@ -4,6 +4,7 @@
   "description": "unit testing function max min and average",
   "main": "max.js",
   "scripts": {
+    "start": "node index.js",
     "test": "node --test",
     "test:coverage": "node --test --experimental-test-coverage"
   },
