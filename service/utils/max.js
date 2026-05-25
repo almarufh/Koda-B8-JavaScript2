@@ -11,6 +11,7 @@ function calculate (data) {
   for (let i = 0; i < data.length; i++) {
     if (typeof data[i] !== "number") {
       checkNumber = false
+      break;
     }
   }
 
@@ -26,6 +27,7 @@ function calculate (data) {
     if (data[i] > getMax) {
       getMax = data[i];
     };
+    
     if (data[i] < getMin) {
       getMin = data[i];
     };
