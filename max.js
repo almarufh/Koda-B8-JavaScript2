@@ -1,17 +1,23 @@
 function calculate (data) {
   if (!(Array.isArray(data))) {
-    return "Parameter must be array";
+    throw new Error ("parameter must be a array");
   };
 
   if (data.length < 1) {
-    return "Array cannot empty";
+    throw new Error ("Array cannot empty");
   }
 
+  let checkNumber = true
   for (let i = 0; i < data.length; i++) {
     if (typeof data[i] !== "number") {
-      return "Array must be number";
+      checkNumber = false
     }
   }
+
+  if (checkNumber === false) {
+    throw new Error ("Array must be number");
+  }
+
   let getMax = data[0];
   let getMin = data[0];
   let getAverage = data[0];
@@ -35,7 +41,11 @@ function calculate (data) {
   return results
 }
 
-console.log(calculate([2, 1, 3, 1, 8, 9]))
-console.log(calculate(["r", 1]))
-console.log(calculate([]))
-console.log(calculate("STRING"))
+// console.log(calculate([2, 1, 3, 1, 8, 9]))
+// console.log(calculate(["r", 1]))
+// console.log(calculate([]))
+// console.log(calculate("STRING"))
+
+module.exports = {
+  calculate
+}
