@@ -37,7 +37,7 @@ function calculate (data) {
 
   let results = {
     code: "00",
-    message: "calculate succes",
+    message: "calculate success",
     data: {
       max: getMax,
       min: getMin,
