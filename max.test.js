@@ -19,7 +19,7 @@ unit('calculating procces', ()=> {
         })
     })
     it('shold return string', () => {
-        input.equal(typeof calculate([2,3,6,7,2,5,8,10,30,50]), "string")
+        input.equal(calculate([2,3,6,7,2,5,8,10,30,50]) instanceof Object, true)
     })
 })
 

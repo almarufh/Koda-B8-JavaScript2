@@ -1,4 +1,9 @@
 const {calculate} = require('./max.js');
 
 
-console.log(calculate([2, 1, 3, 1, 8, 9]))
+const response = calculate([2,5,10,67,8,10,15,20]);
+const data = response.data;
+
+console.log("Max : ", data.max);
+console.log("Min : ", data.min);
+console.log("Average : ", data.average);
