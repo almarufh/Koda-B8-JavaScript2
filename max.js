@@ -41,11 +41,6 @@ function calculate (data) {
   return results
 }
 
-// console.log(calculate([2, 1, 3, 1, 8, 9]))
-// console.log(calculate(["r", 1]))
-// console.log(calculate([]))
-// console.log(calculate("STRING"))
-
 module.exports = {
   calculate
 }
