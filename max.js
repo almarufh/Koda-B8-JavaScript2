@@ -44,17 +44,9 @@ function calculate (data) {
       average: getAverage
     }
   }
-
-  // let results = `Max : ${getMax}\n`;
-  // results += `Min : ${getMin}\n`;
-  // results += `Average : ${getAverage}`;
   return results
 }
 
 module.exports = {
   calculate
 }
-
-
-// const response = calculate([2,5,7,8,9,25,67,89,90])
-// console.log(response.data.max)
